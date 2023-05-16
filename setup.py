@@ -9,7 +9,7 @@ setuptools.setup(
     description='Common code for MyBazaar services',
     long_description='Code that will be used in MyBazaar services is grouped in this repo so that it will not be duplicated',
     long_description_content_type="text/markdown",
-    url='https://gitlab.com/evolt/bazaar/services/aiogevent',
+    url='https://github.com/komsicdorijan/aiogevent',
     license='Evolt',
     packages=setuptools.find_packages(),
     python_requires=">=3"

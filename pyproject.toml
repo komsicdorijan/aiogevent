@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "asyncio-gevent"
+name = "aiogevent"
 version = "0.2.3"
 description = "asyncio & gevent in harmony"
 authors = ["Frédérique Mittelstaedt <hi@gfm.io>"]

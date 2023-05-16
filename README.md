@@ -321,9 +321,9 @@ import threading
 
 import gevent
 
-import asyncio_gevent
+import aiogevent
 
-asyncio.set_event_loop_policy(asyncio_gevent.EventLoopPolicy())
+asyncio.set_event_loop_policy(aiogevent.EventLoopPolicy())
 
 
 async def f():
@@ -339,7 +339,7 @@ def g():
 
 
 async def main():
-    await asyncio.gather(f(), asyncio_gevent.sync_to_async(g)())
+    await asyncio.gather(f(), aiogevent.sync_to_async(g)())
     # OR equivalently
     # await asyncio.gather(f(), asyncio_gevent.greenlet_to_future(gevent.spawn(g)))
 
@@ -368,9 +368,9 @@ import asyncio
 
 import gevent
 
-import asyncio_gevent
+import aiogevent
 
-asyncio.set_event_loop_policy(asyncio_gevent.EventLoopPolicy())
+asyncio.set_event_loop_policy(aiogevent.EventLoopPolicy())
 
 
 async def f():
@@ -388,7 +388,7 @@ async def g():
 
 async def main():
     await asyncio.gather(
-        f(), asyncio_gevent.sync_to_async(asyncio_gevent.async_to_sync(g))()
+        f(), aiogevent.sync_to_async(aiogevent.async_to_sync(g))()
     )
 
 
